@@ -66,10 +66,6 @@ function(aws_cryptosdk_set_common_properties target)
             list(APPEND AWS_C_FLAGS -Wextra)
         endif()
 
-        if(NOT SET_PROPERTIES_NO_PEDANTIC)
-            list(APPEND AWS_C_FLAGS -pedantic)
-        endif()
-
         # Warning disables always go last to avoid future flags re-enabling them
         list(APPEND AWS_C_FLAGS -Wno-long-long)
         list(APPEND AWS_C_FLAGS -Wno-missing-field-initializers)
